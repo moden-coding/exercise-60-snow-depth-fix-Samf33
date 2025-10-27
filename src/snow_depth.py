@@ -3,7 +3,8 @@
 import pandas as pd
 
 def snow_depth():
-    pass
+    df = pd.read_csv("src/kumpula-weather-2017.csv", index_col=0)
+    return df.loc[0:, "Snow depth (cm)"].max()
 
 def main():
     result = snow_depth()
